@@ -49,11 +49,14 @@ function resetGame() {
 function update() {
   player.dy += gravity;
 
-  if (keys["ArrowRight"] || keys["d"]) player.dx = 3;
-  else if (keys["ArrowLeft"] || keys["a"]) player.dx = -3;
+  if (keys["ArrowRight"] || keys["d"] || keys["D"]) player.dx = 3;
+  else if (keys["ArrowLeft"] || keys["a"] || keys["A"]) player.dx = -3;
   else player.dx = 0;
 
-  if ((keys["ArrowUp"] || keys["w"] || keys[" "]) && player.onGround) {
+  if (
+    (keys["ArrowUp"] || keys["w"] || keys[" "] || keys["W"]) &&
+    player.onGround
+  ) {
     player.dy = -10;
     player.onGround = false;
     player.onPlatform = null;
