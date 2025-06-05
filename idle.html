@@ -61,26 +61,19 @@
     <main>
       <div class="container py-4">
         <section class="text-center">
-          <p>This is a simple platform jumper game made with JavaScript</p>
-          <p>The game is procedurally generated</p>
-          <p>It saves your best score in localStorage</p>
+          <p>This is a simple idle game made with JavaScript</p>
+          <p>Press the send applications button!</p>
+          <p>Hire AI assistants!</p>
           <p>Hope you have fun playing this game!</p>
         </section>
 
         <div id="game-container">
-          <div id="hud">
-            <span id="coin-count">Coins: 0</span>
+          <h1>Idle Job Hunter</h1>
+          <p>Job Applications Sent: <span id="applications">0</span></p>
+          <button id="send-button">Send Application</button>
+          <div id="upgrades">
+            <button id="buy-ai" disabled>Hire AI Assistant (Cost: 100)</button>
           </div>
-          <canvas id="gameCanvas" width="800" height="400"></canvas>
-          <section class="text-center">
-            <h2>Controls</h2>
-            <p>
-              Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move
-              and jump.
-            </p>
-            <p><strong>Spacebar</strong> can also be used for jumping.</p>
-            <p>Collect coins, avoid hazards, and stomp enemies!</p>
-          </section>
         </div>
       </div>
     </main>
@@ -110,6 +103,6 @@
       crossorigin="anonymous"
     ></script>
 
-    <script type="module" src="js/game.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>
