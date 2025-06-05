@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const buyAIButton = document.getElementById("buy-ai");
 
   function updateDisplay() {
-    applicationsDisplay.textContent = applications;
+    applicationsDisplay.textContent = Math.floor(applications);
     buyAIButton.disabled = applications < aiCost;
     buyAIButton.textContent = `Hire AI Assistant (Cost: ${Math.ceil(aiCost)})`;
   }
